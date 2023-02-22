@@ -11,7 +11,7 @@ export type Wish = {
     description?: string;
     url?: string;
     imageUrl?: string;
-    isClaimed: boolean;
+    status: 'free' | 'claimed';
     isClaimedByUser?: boolean;
 };
 export type Invitation = {

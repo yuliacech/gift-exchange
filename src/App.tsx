@@ -2,16 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { data } from './data';
-import { GuestCard } from './guest-card'
+import { GuestCard, Header } from './components';
+
 
 
 function App() {
   const { user, event, guests } = data;
   return (
     <>
-      <header>
-        Gift exchange
-      </header>
+      <Header />
       <main>
         <h1>
           Hello, {user.name}! You're hosting <i>{event.name}</i>

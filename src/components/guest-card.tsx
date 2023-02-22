@@ -1,5 +1,5 @@
 import { EuiButton, EuiCard } from '@elastic/eui';
-import type { Guest } from './types';
+import type { Guest } from '../types';
 import {css} from '@emotion/react'
 export const GuestCard = ({ guest }: { guest: Guest; }) => {
     const { name, wishes } = guest;
@@ -16,7 +16,7 @@ export const GuestCard = ({ guest }: { guest: Guest; }) => {
     description={wish.description}
     footer={
       
-          <EuiButton>View</EuiButton>
+          <EuiButton fill>View</EuiButton>
         
     }
   />

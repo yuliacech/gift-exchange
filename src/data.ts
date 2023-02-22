@@ -1,4 +1,4 @@
-import { User, Event, Guest, Invitation } from "./types";
+import { User, Event, Guest, Invitation, Wish } from "./types";
 
 const user = {
     id: 'user1',
@@ -18,8 +18,8 @@ const guests = [
             description: 'Non slippery mat, thin up to 5mm, dark color',
             url: 'https://www.example.com',
             imageUrl: 'https://source.unsplash.com/be-6rpnQ30k/300x300',
-            isClaimed: false,
-        }],
+            status: 'free',
+        } as Wish],
     }, {
         name: 'Emma', 
         invitation: { 
