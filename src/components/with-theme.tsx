@@ -1,6 +1,6 @@
 
 import '@elastic/eui/dist/eui_theme_light.css';
-import { EuiThemeProvider } from "@elastic/eui";
+import { EuiProvider, EuiThemeProvider } from "@elastic/eui";
 
 export const WithTheme = ({ children }: { children: React.ReactNode }) => {
     const overrides =
@@ -23,8 +23,12 @@ export const WithTheme = ({ children }: { children: React.ReactNode }) => {
         }
     };
     return (
-        <EuiThemeProvider modify={overrides}>
-            {children}
-        </EuiThemeProvider>
+        <EuiProvider>
+
+            <EuiThemeProvider modify={overrides}>
+                {children}
+            </EuiThemeProvider>
+
+        </EuiProvider>
     );
 }
