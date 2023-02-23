@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { data } from './data';
 import { GuestCard, Header } from './components';
+import { EuiPageTemplate } from '@elastic/eui';
 
 
 
@@ -11,15 +12,25 @@ function App() {
   return (
     <>
       <Header />
-      <main>
-        <h1>
-          Hello, {user.name}! You're hosting <i>{event.name}</i>
-        </h1>
-        <h2>
-          All wishes
-        </h2>
+      <EuiPageTemplate
+      >
+        <EuiPageTemplate.Header pageTitle={event.name} description={<>Hello, {user.name}! You're hosting <i>{event.name}</i></>}
+        tabs={[
+          {
+            label: 'All guests',
+            isSelected: true,
+          },
+          {
+            label: 'Your wishes',
+          },
+          {
+            label: 'Your claims'
+          }
+        ]}/>
+        <EuiPageTemplate.Section>
         {guests.map(guest => (<GuestCard guest={guest} />))}
-      </main>
+        </EuiPageTemplate.Section>
+      </EuiPageTemplate>
     </>
   );
 }
