@@ -1,21 +1,22 @@
 import { EuiHeader, EuiHeaderLink, EuiHeaderLinks, EuiHeaderLogo, EuiHeaderSectionItem } from "@elastic/eui";
+import headerLogo from '../assets/header-logo.svg';
 
 export const Header = () => {
-    return (
-        <EuiHeader>
+  return (
+    <EuiHeader>
       <EuiHeaderSectionItem border="right">
-        <EuiHeaderLogo>Elastic</EuiHeaderLogo>
+        <EuiHeaderLogo iconType={headerLogo}>Gifts exchange</EuiHeaderLogo>
       </EuiHeaderSectionItem>
 
       <EuiHeaderSectionItem>
-        <EuiHeaderLinks aria-label="App navigation links example">
-          <EuiHeaderLink isActive>Docs</EuiHeaderLink>
+        <EuiHeaderLinks>
+          <EuiHeaderLink isActive>Link</EuiHeaderLink>
 
-          <EuiHeaderLink>Code</EuiHeaderLink>
+          <EuiHeaderLink>Link</EuiHeaderLink>
 
-          <EuiHeaderLink iconType="help">Help</EuiHeaderLink>
+          <EuiHeaderLink iconType="user">Log in</EuiHeaderLink>
         </EuiHeaderLinks>
       </EuiHeaderSectionItem>
     </EuiHeader>
-    );
+  );
 }

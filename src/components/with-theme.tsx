@@ -24,11 +24,9 @@ export const WithTheme = ({ children }: { children: React.ReactNode }) => {
     };
     return (
         <EuiProvider>
-
             <EuiThemeProvider modify={overrides}>
                 {children}
             </EuiThemeProvider>
-
         </EuiProvider>
     );
 }
